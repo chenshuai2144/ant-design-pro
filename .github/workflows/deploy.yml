@@ -11,18 +11,9 @@ jobs:
       - name: checkout
         uses: actions/checkout@master
 
-      - name: install
-        run: npm install
-
-      - name: plugins
-        run: yarn add umi-plugin-antd-theme umi-plugin-pro
-
-      - name: site
-        run: npm run site
-
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTION_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./public
           force_orphan: true
