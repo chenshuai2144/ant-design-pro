@@ -20,7 +20,7 @@ jobs:
       - name: site
         run: npm run site
 
-      - name: Deploy
+      - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTION_TOKEN }}
